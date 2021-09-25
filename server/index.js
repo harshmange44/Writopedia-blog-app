@@ -51,4 +51,13 @@ app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/categories", categoryRoute);
 
-app.listen(process.env.PORT || 5000);
+if(process.env.NODE_ENV == "production"){
+  app.use(express.static("client/build"));
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  });
+}
+
+app.listen(process.env.PORT || 5000, () => {
+  console.log("Server is running...")
+});
