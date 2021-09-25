@@ -34,10 +34,10 @@ app.use(bodyParser.urlencoded(
 
 app.use(cors());
 
-app.use(express.static(path.resolve(__dirname, "./client/build")));
+app.use(express.static(path.join(__dirname, "./client/build")));
 
 app.get("*", function (request, response) {
-  response.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
+  response.sendFile(path.join(__dirname, "./client/build", "index.html"));
 });
 
 const storage = multer.diskStorage({
