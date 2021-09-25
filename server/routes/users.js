@@ -78,7 +78,7 @@ router.patch("/:id", upload.single('imgFile'), async (req, res) => {
     if(req.file){
       const img = fs.readFileSync(req.file.path);
       var encode_img = img.toString('base64');
-      req.body.profilePic = Buffer.from(encode_img).toString('base64');
+      req.body.profilePic = new Buffer(encode_img, 'base64');
     }
 
     try {

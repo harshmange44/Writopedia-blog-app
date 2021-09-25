@@ -7,7 +7,7 @@ export default function Settings() {
   const [file, setFile] = useState(null);
   const [name, setName] = useState("");
   // const [username, setUsername] = useState("");
-  // const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
@@ -27,9 +27,9 @@ export default function Settings() {
       // if(username!=""){
       //   data.append("username", username);
       // }
-      // if(email!=""){
-      //   data.append("email", email);
-      // }
+      if(email!=""){
+        data.append("email", email);
+      }
       if(password!=""){
         data.append("password", password);
       }
@@ -96,12 +96,12 @@ export default function Settings() {
             placeholder={user.username}
             onChange={(e) => setUsername(e.target.value)}
           /> */}
-          {/* <label>Email</label>
+          <label>Email</label>
           <input
             type="email"
             placeholder={user.email}
             onChange={(e) => setEmail(e.target.value)}
-          /> */}
+          />
           <label>Password</label>
           <input
             type="password"
