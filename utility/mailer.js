@@ -109,7 +109,7 @@ module.exports.feedback = function(name, mail, feedback) {
     });
 
     var mailOptions = {
-        from: 'Writopedia',
+        from: 'Writopedia <writopedia.write@gmail.com>',
         to: mail,
         subject: 'We Got You!!!',
         html: '<head><link rel="preconnect" href="https://fonts.googleapis.com">'
