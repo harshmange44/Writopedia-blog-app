@@ -26,7 +26,7 @@ module.exports.welcome = function(name, mail, host, token) {
             //    00000000
             //                </h1>
            
-              + '<br /><br /><a href="http:\/\/' + host + '\/confirmation\/' + mail + '\/' + token + '\n" style="width:100px; background-color:yellow; font-family:Roboto-Bold; font-color:white; padding-top:15px; padding-bottom:15px; padding-left:15%; padding-right:15%; border-radius:30px; text-decoration:none; color:white; font-size: 18px; font-weight: bolder; display: block;">'
+              + '<br /><br /><a href="https:\/\/' + host + '\/verification\/confirmation\/' + mail + '?token=' + token + '\n" style="width:100px; background-color:yellow; font-family:Roboto-Bold; font-color:white; padding-top:15px; padding-bottom:15px; padding-left:15%; padding-right:15%; border-radius:30px; text-decoration:none; color:white; font-size: 18px; font-weight: bolder; display: block;">'
               + 'Verify Email'
               + '</a> <br /><br />'
                + '<p style="max-width:500px; align:center; font-family:Roboto; padding-bottom:0px; wrap:hard">'
@@ -74,7 +74,7 @@ module.exports.resendVerificationEmail = function(name, mail, host, token) {
                + '<p style="max-width:500px; align:center; font-family:Roboto-Bold; padding-bottom:0px; wrap:hard">'
                + 'Please verify your email using the link below (expires in 24 hr):\n'
                + '</p>'
-              + '<br /><br /><a href="http:\/\/' + host + '\/confirmation\/' + mail + '\/' + token + '\n" style="width:100px; background-color:yellow; font-family:Roboto-Bold; font-color:white; padding-top:15px; padding-bottom:15px; padding-left:15%; padding-right:15%; border-radius:30px; text-decoration:none; color:white; font-size: 18px; font-weight: bolder; display: block;">'
+              + '<br /><br /><a href="https:\/\/' + host + '\/verification\/confirmation\/' + mail + '?token=' + token + '\n" style="width:100px; background-color:yellow; font-family:Roboto-Bold; font-color:white; padding-top:15px; padding-bottom:15px; padding-left:15%; padding-right:15%; border-radius:30px; text-decoration:none; color:white; font-size: 18px; font-weight: bolder; display: block;">'
               + 'Verify Email'
               + '</a><br /><br />'
                + '<p style="max-width:500px; align:center; font-family:Roboto; padding-bottom:0px; wrap:hard">'
