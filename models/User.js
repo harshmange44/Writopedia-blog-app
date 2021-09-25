@@ -22,8 +22,7 @@ const UserSchema = new mongoose.Schema(
     },
     profilePic: {
       data:Buffer,
-      contentType: String,
-      default: ""
+      contentType: String
     },
     isVerified: { 
       type: Boolean, 
