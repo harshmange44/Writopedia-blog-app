@@ -7,13 +7,11 @@ var email = require('../utility/mailer');
 const crypto = require('crypto');
 
 //confirm account by email
-router.get('/verified', function (req, res, next) {
-    console.log("Verification: verified");    
-});
+// router.get('/verified', function (req, res, next) {
+// });
 
 router.get('/confirmation/:email?', function (req, res, next) {
 
-    console.log("Verification: veri api req");
     var tokenFound = "";
 
     if(req.query.token){
@@ -24,22 +22,18 @@ router.get('/confirmation/:email?', function (req, res, next) {
 
         // token is not found into database i.e. token may have expired 
         if (err){
-            console.log("Verification: token not found");
             res.status(400).json({msg:'Your verification link may have expired. Please click on resend for verify your Email.'});
         }
         // if token is found then check valid user 
         else{
-            console.log("Verification: token found");
 
             User.findOne({ _id: token._userId, email: req.params.email }, function (err, user) {
                 // not valid user
                 if (!user){
-                    console.log("Verification: not valid user");
                     res.status(401).json({msg:'We were unable to find a user for this verification. Please SignUp!'});
                 } 
                 // user is already verified
                 else if (user.isVerified){
-                    console.log("Verification: user  already veri");
                     res.status(200).json('User has been already verified. Please Login');
                 }
                 // verify user
@@ -49,12 +43,11 @@ router.get('/confirmation/:email?', function (req, res, next) {
                     user.save(function (err) {
                         // error occur
                         if(err){
-                          console.log("Verification: err updating user veri");
                           res.status(500).json({msg: err.message});
                         }
                         // account successfully verified
                         else{
-                            console.log("Verification: user veri success");
+                          res.redirect("/login");
                           res.status(200).json('Your account has been successfully verified');
                           next();
                         }
