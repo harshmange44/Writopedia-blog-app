@@ -10,7 +10,7 @@ module.exports.welcome = function(name, mail, host, token) {
     });
 
     var mailOptions = {
-        from: 'Writopedia',
+        from: 'Writopedia <writopedia.write@gmail.com>',
         to: mail,
         subject: 'Welcome to Writopedia!!',
         html: '<head></head><body bgcolor="black"><div><div style="text-align:center; mid-width:375px; min-height:50px; padding-left:20px; padding-right:20px; max-width:600px; margin:auto; padding-top:10px"><img src="https://drive.google.com/uc?id=18NrNvZLn1K3AGx_KuPETo0eKCoUMyI7s" alt="Writopedia" style="max-width:150px; border:5px; border-color:white; margin:20px;"></div><div align="center" style="background-color:#FFFFFF; padding-left:20px; padding-right:20px; max-width:550px; margin:auto; border-radius:5px; padding-bottom:5px; text-align:left; margin-bottom:40px; width:80%"> '
@@ -65,7 +65,7 @@ module.exports.resendVerificationEmail = function(name, mail, host, token) {
     });
 
     var mailOptions = {
-        from: 'Writopedia',
+        from: 'Writopedia <writopedia.write@gmail.com>',
         to: mail,
         subject: 'Account Verification Link',
         html: '<head></head><body bgcolor="black"><div><div style="text-align:center; mid-width:375px; min-height:50px; padding-left:20px; padding-right:20px; max-width:600px; margin:auto; padding-top:10px"><img src="https://drive.google.com/uc?id=18NrNvZLn1K3AGx_KuPETo0eKCoUMyI7s" alt="Writopedia" style="max-width:150px; border:5px; border-color:white; margin:20px;"></div><div align="center" style="background-color:#FFFFFF; padding-left:20px; padding-right:20px; max-width:550px; margin:auto; border-radius:5px; padding-bottom:5px; text-align:left; margin-bottom:40px; width:80%"> '
