@@ -1,0 +1,103 @@
+.top {
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  display: flex;
+  margin-top: 2%;
+  margin-bottom: 3%;
+  align-items: center;
+  font-family: "Josefin Sans", sans-serif;
+  z-index: 999;
+}
+
+.headerTitleLg {
+  cursor: pointer;
+}
+
+.headerTitleLg a{
+  color: #000000;
+  text-decoration: none;
+}
+
+.topLeft,
+.topRight {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topCenter {
+  flex: 6;
+}
+
+.topIcon {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #444;
+  cursor: pointer;
+}
+
+.topImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.topList {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.topListItem {
+  margin-right: 20px;
+  font-size: 18px;
+  font-weight: 300;
+  cursor: pointer;
+  display: inline-grid;
+}
+
+.topListItem .link-div {
+  align-self: center;
+}
+
+.topListItem-write {
+  display: inline-flex;
+  border-radius: 8px;
+  border: 1px solid rgb(112, 112, 112);
+  /* margin-left: 100px; */
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #3d3d3d;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.topListItem:hover {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.topListItem-write:hover {
+  font-weight: 600;
+  font-size: 22px;
+  color: rgb(109, 172, 255);
+  border: 2px solid rgb(109, 172, 255);
+}
+
+.topSearchIcon {
+  font-size: 18px;
+  color: #666;
+  cursor: pointer;
+  margin-left: 15px;
+}
