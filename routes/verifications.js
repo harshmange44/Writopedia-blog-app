@@ -11,11 +11,16 @@ router.get('/verified', function (req, res, next) {
     console.log("Verification: verified");    
 });
 
-app.get('/confirmation/:email/:token', function (req, res, next) {
+router.get('/confirmation/:email?', function (req, res, next) {
 
     console.log("Verification: veri api req");
+    var tokenFound = "";
 
-    Token.findOne({ token: req.params.token }, function (err, token) {
+    if(req.query.token){
+        tokenFound = req.query.token;
+    }
+
+    Token.findOne({ token: tokenFound }, function (err, token) {
 
         // token is not found into database i.e. token may have expired 
         if (err){
